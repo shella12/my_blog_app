@@ -11,6 +11,7 @@
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
+  - [Run](#run)
   - [Usage](#usage)
   - [Test](#tests)
 - [👥 Authors](#authors)
