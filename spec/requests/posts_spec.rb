@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Posts', type: :request do
-  describe 'GET /index' do
+  describe 'GET #index' do
     it 'returns http success' do
       get '/posts'
       expect(response.body).to render_template(:index)
@@ -9,7 +9,7 @@ RSpec.describe 'Posts', type: :request do
     end
   end
 
-  describe 'GET users/:id/post/:id' do
+  describe 'GET #show' do
     it 'returns http success' do
       get '/users/1/posts/7'
       expect(response.body).to render_template(:show)
@@ -17,7 +17,7 @@ RSpec.describe 'Posts', type: :request do
     end
   end
 
-  describe 'GET users/:id/post' do
+  describe 'GET #index' do
     it 'returns http success' do
       get '/users/1/posts'
       expect(response.body).to render_template(:index)
