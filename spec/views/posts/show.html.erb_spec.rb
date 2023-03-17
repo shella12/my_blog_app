@@ -4,6 +4,10 @@ RSpec.describe 'posts/show.html.erb', type: :view do
   before do
     render
   end
+  
+  it 'renders show page' do
+    expect(response).to render_template(:show)
+  end
 
   it 'p tag is present' do
     expect(rendered).to have_selector('p')
