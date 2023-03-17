@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe 'posts/index.html.erb', type: :view do
-
+RSpec.describe 'posts/show.html.erb', type: :view do
+  
   before do 
     render
   end
@@ -10,7 +10,7 @@ RSpec.describe 'posts/index.html.erb', type: :view do
     expect(rendered).to have_selector('p')
  end
   it "p has a placeholder" do
-    expect(rendered).to include('Here is a list of posts for a given user')
+    expect(rendered).to include('This is my post and i\'m a user id')
  end
-   
+ 
 end
