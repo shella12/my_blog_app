@@ -8,7 +8,7 @@ RSpec.describe 'users/index.html.erb', type: :view do
   it 'renders show page' do
     expect(response).to render_template(:index)
   end
-  
+
   it 'p tag is present' do
     expect(rendered).to have_selector('p')
   end
