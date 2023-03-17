@@ -4,7 +4,5 @@ class UsersController < ApplicationController
     @username = 'ayesha'
   end
 
-  def show
-    # @user = User.find(params[:id]).name
-  end
+  def show; end
 end
