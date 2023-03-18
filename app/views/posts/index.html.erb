@@ -1,0 +1,29 @@
+
+  <div class="user">
+  <img src=<%=@user.photo%> alt='user_image' class="profile_photo"/>
+  <div class="user_box">
+   <h1><%=@user.name%></h1>
+   <p>Number of posts: <%=@user.posts_counter%></p>
+   </div>
+</div>
+
+<% @posts.each_with_index do |post, index| %>
+<div class="recent_posts">
+<%=link_to user_post_path(id: post.id, index: index.to_i+1), class: "user_post_link" do%>
+   <h3>Post#<%=index.to_i+1%></h3>
+   <%end%>
+   <p><%=post.text%></p>
+   <ul>
+   <li>comments: <%=post.comments_counter%></li>
+   <li>likes: <%=post.likes_counter%></li>
+   </ul>
+</div>
+
+<div class="post-comments">
+<ul>
+<% post.most_recent_comments.each do |comment|%>
+ <li><%=username(comment.user_id)%>: <%=comment.text%></li>
+<%end%>
+<ul>
+</div>
+<%end %>
