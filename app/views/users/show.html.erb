@@ -1,7 +1,11 @@
-<form method="POST"> 
-<img src=<%@user.photo%> alt="Profile_picture">
+<%= stylesheet_link_tag 'style' %>
+<div class="user">
+<img src=<%=@user.photo%> alt="Profile_picture" class="profile_photo">
+<div class="user_box">
 <h1><%=@user.name%></h1>
 <p>Number of posts: <%=@user.posts_counter%></p>
+</div>
+</div>
 <div class="bio">
 <h2>Bio</h2>
 <p><%=@user.bio%></p>
@@ -18,4 +22,3 @@
 </div>
 <%end %>
 <%= link_to "See all posts", user_posts_path(@user.id), class: "see_post_btn" %>
-<form>

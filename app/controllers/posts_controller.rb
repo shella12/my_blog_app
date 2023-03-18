@@ -1,5 +1,4 @@
 class PostsController < ApplicationController
-  
   def index
     @user = User.find(params[:user_id])
     @posts = Post.where(user_id: params[:user_id])
@@ -11,7 +10,7 @@ class PostsController < ApplicationController
   end
 
   def username(user_id)
-      User.find(user_id).name
+    User.find(user_id).name
   end
   helper_method :username
 end
