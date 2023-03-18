@@ -1,2 +1,17 @@
-<h1>User#index</h1>
-<p>This is my post and i'm a user id</p>
+ <h1>Post#<%=params[:index]%></h1>
+ <h2>by <%=username(params[:user_id])%></h2> 
+
+ <ul>
+   <li>comments: <%=@post.comments_counter%></li>
+   <li>likes: <%=@post.likes_counter%></li>
+</ul>
+
+<p><%=@post.text%></p>
+
+<div class="post-comments">
+<ul>
+<% @post.most_recent_comments.each do |comment|%>
+ <li><%=username(comment.user_id)%>: <%=comment.text%></li>
+<%end%>
+<ul>
+</div>
