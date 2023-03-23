@@ -8,6 +8,7 @@
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
+
 .bi-hand-thumbs-up-fill::before {
   font-size: medium;
   color: #fff;
@@ -50,34 +51,38 @@ a {
 ul {
   list-style: none;
 }
+
 .user {
-display: grid;
-grid-template-columns: 20% 80%;
-grid-gap: 20px 10px;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-gap: 20px 10px;
 }
 
 .profile_photo {
   border-radius: 50%;
-  height:8rem;
-  width:8rem;
+  height: 8rem;
+  width: 8rem;
   object-fit: contain;
   border: 2px solid black;
-
 }
 
 .user_box {
-display: flex;
-flex-direction: column;
-padding: 1rem;
-width: 100%;
-border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: 100%;
+  border: 2px solid black;
 }
 
 .user_box p {
   align-self: flex-end;
 }
 
-.bio, .recent_posts, .see_post_btn, .post-comments, .single-post {
+.bio,
+.recent_posts,
+.see_post_btn,
+.post-comments,
+.single-post {
   padding: 1rem;
   border: 2px solid black;
 }
@@ -87,24 +92,25 @@ border: 2px solid black;
   flex-direction: column;
 }
 
-.recent_posts ul, .post_details ul {
+.recent_posts ul,
+.post_details ul {
   display: flex;
   justify-content: space-between;
   align-self: flex-end;
   align-items: center;
-  gap:1rem
-  }
+  gap: 1rem;
+}
 
 .see_post_btn {
   align-self: center;
 }
 
-.post_details{
-display: flex;
-justify-content: space-between;
-align-items: center;
-align-content: center;
-margin-bottom: 2rem;
+.post_details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  margin-bottom: 2rem;
 }
 
 .post_details h1 {
@@ -112,19 +118,21 @@ margin-bottom: 2rem;
 }
 
 .post-btns {
-  gap: 1rem
+  gap: 1rem;
 }
 
 .small {
-  height:100px;
-  width:100px;
-}
-.xsmall {
-  height:60px;
-  width:60px;
+  height: 100px;
+  width: 100px;
 }
 
-.current-user, .link-end {
+.xsmall {
+  height: 60px;
+  width: 60px;
+}
+
+.current-user,
+.link-end {
   width: fit-content;
   margin-left: auto;
   padding-right: 1.5rem;
