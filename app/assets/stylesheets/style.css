@@ -54,8 +54,8 @@ ul {
 
 .user {
   display: grid;
-  grid-template-columns: 20% 80%;
-  grid-gap: 20px 10px;
+  grid-template-columns: 1fr 7fr;
+  grid-gap: 10px 5px;
 }
 
 .profile_photo {
