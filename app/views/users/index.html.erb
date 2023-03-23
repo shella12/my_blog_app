@@ -1,12 +1,12 @@
-<%= stylesheet_link_tag 'style' %>
-<% @users.each do |user| %>
-<div class="user">
-  <%= link_to user_path(user.id) do %>
-    <img src=<%=user.photo%> alt='user_image' class="profile_photo"/>
-  <% end %>
-  <div class="user_box">
-      <h1><%=user.name%></h1>
-      <p>Number of posts: <%=user.posts_counter%></p>
-  </div>
+<div class="d-flex flex-column">
+<%= link_to user_path(1), class: "link-end" do %>
+      <img src=<%=@current_user.photo%> alt='user_image' class="profile_photo small mb-3"/>
+      <h1 class="current-user h3"><%=@current_user.name%></h1>
+<% end %>
 </div>
+
+<% @users.each do |user| %>
+<% if (user.id != @current_user.id)%>
+<%=render partial: "shared/user_header", locals: {user: user}%>
+<%end %>
 <%end %>

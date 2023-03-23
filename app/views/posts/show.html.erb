@@ -9,10 +9,4 @@
 
 <p><%=@post.text%></p>
 </div>
-<div class="post-comments">
-<ul>
-<% @post.most_recent_comments.each do |comment|%>
- <li><%=username(comment.user_id)%>: <%=comment.text%></li>
-<%end%>
-<ul>
-</div>
+<%=render partial: "shared/comments", locals: {post: @post, current_user: @current_user}%>
