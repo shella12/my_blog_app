@@ -1,0 +1,14 @@
+<h1 class="h1">Add new post</h1>
+<%= form_with model: @posts, method: :post, class: " d-flex flex-column" do |form| %>
+  <div class="mb-3">
+  <%= form.label :title, "Title" %>
+  <%= form.text_field :title,  class: "form-control" %>
+   </div>
+   <div class="mb-3">
+   <%= form.label "Post" %>
+  <%= form.text_area :text, size: "30x10", class: "form-control" %>
+   </div>
+   <div class="mb-3">
+  <%= form.submit "Add post", class: "btn btn-success align-self-end" %>
+   </div>
+<% end %>

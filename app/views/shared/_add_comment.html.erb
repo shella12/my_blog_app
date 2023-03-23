@@ -1,0 +1,8 @@
+<%= form_with model: @comment, url: comment_path ,  method: :post, class: " d-flex" do |form|%>
+ <img src=<%=current_user.photo%> alt='user_image' class="profile_photo xsmall"/>
+ <%= form.hidden_field :post, value: current_post.id %>
+ <div class="comment_field_box">
+ <%= form.text_field :text, placeholder: "Add comment... ", class: "comment_field p-3"%>
+ <%= form.submit "comment", class: "btn btn-success comment_field_btn",placeholder: "Add comment... "%>
+ </div>
+ <%end%>
