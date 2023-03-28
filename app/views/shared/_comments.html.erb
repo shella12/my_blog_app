@@ -1,8 +1,8 @@
 <div class="post-comments">
 <%=render partial: "shared/add_comment", locals: {current_post: post, current_user: @current_user}%>
 <ul class="comments_list">
-<% post.most_recent_comments.each do |comment|%>
- <li><span class="username"><%=username(comment.user_id)%></span>: <%=comment.text%></li>
+<% post.comments.each do |comment|%>
+ <li><span class="username"><%=(comment.user.name)%></span>: <%=comment.text%></li>
 <%end%>
 <ul>
 </div>
