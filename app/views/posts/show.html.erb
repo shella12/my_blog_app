@@ -6,7 +6,7 @@
    <li>likes: <%=@post.likes_counter%></li>
 </ul>
 </div>
-
+<h2 class="h6"><%=@post.title%></h2>
 <p><%=@post.text%></p>
 </div>
 <%=render partial: "shared/comments", locals: {post: @post, current_user: @current_user}%>
