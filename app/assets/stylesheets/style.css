@@ -165,8 +165,9 @@ ul {
   padding: 1rem;
 }
 
-.h5, .h6 {
-  color:#f70844
+.h5,
+.h6 {
+  color: #f70844;
 }
 
 .username {
