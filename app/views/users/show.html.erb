@@ -5,10 +5,12 @@
 <p><%=@user.bio%></p>
 </div>
 
-<% @user.most_recent_posts.each_with_index do |post, index| %>
+<% @user.most_recent_posts.each do |post| %>
 <div class="recent_posts">
-   <h3>Post#<%=index.to_i+1%></h3>
-   <%=render partial: "shared/post", locals: {post: post, index: index, user: @user}%>
+   <%=link_to user_post_url(id: post.id, user_id: @user.id), class: "user_post_link" do%>
+   <h3>Post#<%=post.id%></h3>
+   <%end%>
+   <%=render partial: "shared/post", locals: {post: post, user: @user}%>
 </div>
 <%end %>
 <div class="post-btns d-flex justify-content-between  align-self-end">

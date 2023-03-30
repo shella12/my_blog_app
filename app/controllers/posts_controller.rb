@@ -1,13 +1,12 @@
 class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
-    @posts = Post.where(user_id: params[:user_id])
+    @posts = Post.includes(:comments).where(user_id: params[:user_id])
     @current_user = current_user
   end
 
   def show
-    @post = Post.find(params[:id])
-    @comments = Comment.where(post_id: params[:id])
+    @post = Post.includes(:comments).find(params[:id])
     @current_user = current_user
   end
 
@@ -24,9 +23,4 @@ class PostsController < ApplicationController
       puts @post.errors.full_messages
     end
   end
-
-  def username(user_id)
-    User.find(user_id).name
-  end
-  helper_method :username
 end
