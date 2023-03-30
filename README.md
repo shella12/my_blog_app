@@ -141,6 +141,11 @@ _Note: You can also run the test by using just `rspec` but it runs all tests fol
 - Twitter: [@Ayesha Arshad](https://twitter.com/AyeshaA03712974)
 - LinkedIn: [Ayesha Arshad](https://www.linkedin.com/in/ayesha-arshad-a690a015a/)
 
+👤 **Gulalai Ahmadi**
+
+- GitHub: [@githubhandle](https://github.com/AhmadiGu)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/gulalai-ahmadi/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
