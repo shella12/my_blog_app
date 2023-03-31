@@ -7,5 +7,5 @@
    <%end%>
    <%=render partial: "shared/post", locals: {post: post, index: index, user: post.user}%>
 </div>
-<%=render partial: "shared/comments", locals: {post: post, current_user: @current_user}%>
+<%=render partial: "shared/comments", locals: {post: post, current_user: @user}%>
 <%end %>
