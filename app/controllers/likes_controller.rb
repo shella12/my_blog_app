@@ -6,7 +6,7 @@ class LikesController < ApplicationController
   def create
     puts 'create Like'
     @post = Post.find(params[:post])
-    @like = Like.new(user: current_user, post: @post)
+    @like = Like.new(user: @post.user, post: @post)
     if @like.save
       puts 'saved'
       redirect_to user_posts_path(params[:current_user])

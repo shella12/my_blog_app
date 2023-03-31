@@ -3,7 +3,7 @@
    <ul>
    <li>comments: <%=post.comments_counter%></li>
    <li>likes: <%=post.likes_counter%></li>
-   <li><%=form_with model: @like, url: like_path(@current_user.id), method: :post do |form|%>
+   <li><%=form_with model: @like, url: like_path(user.id), method: :post do |form|%>
     <%= form.hidden_field :post, value: post.id %>
     <%= form.hidden_field :current_user, value: user.id %>
     <div class = "like-btn">
